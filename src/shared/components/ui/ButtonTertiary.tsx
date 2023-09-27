@@ -4,11 +4,13 @@ interface IProps {
   className?: string;
   dataNombreboton?: string;
   url: string;
+  text: string;
 }
 export const ButtonTertiary = ({
   url,
   className = "",
   dataNombreboton = "",
+  text = "",
 }: IProps) => {
   return (
     <a
@@ -32,7 +34,7 @@ export const ButtonTertiary = ({
                   className="btn-tertiary__img"
                 />
               </div>
-              <span className="btn-tertiary__txt">AGENDAR TEST DRIVE</span>
+              <span className="btn-tertiary__txt">{text}</span>
             </div>
           </div>
         </div>

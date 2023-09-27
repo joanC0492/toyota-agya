@@ -11,20 +11,21 @@ export const Buttons = () => {
         dataNombreboton="boton open modal play youtube"
         onClick={() => openModal("07-youtube-video")}
       />
-
-      <div className="text-left | ml-[48px]">
+      <div className="text-left | ml-[68px]">
         <div>
           <ButtonTertiary
             className="fade-block | animation-delay-500 | mb-2"
             dataNombreboton="boton open pagina 1"
-            url="https://www.toyotaperu.com.pe/consulta-agya#solicitud-t"
+            url="https://www.toyotaperu.com.pe/consulta-agya"
+            text="Cotizar"
           />
         </div>
         <div>
           <ButtonTertiary
             className="fade-block | animation-delay-750"
             dataNombreboton="boton open pagina 2"
-            url="https://www.toyotaperu.com.pe/consulta-agya#solicitud-t"
+            url="https://www.toyotaperu.com.pe/concesionarios-toyota"
+            text="Ver concesionarios"
           />
         </div>
       </div>

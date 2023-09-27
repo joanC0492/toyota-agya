@@ -18,7 +18,7 @@ export const ModalDimensiones = ({ className }: IProps) => {
       <div className="skew-x-[5.5deg] | text-white">
         <div className="mt-20 | mb-[52px]">
           <p className="font-designer | text-2xl | text-center">
-            VER <span className="text-toyota-orange">DIMENSIONES</span>
+            <span className="text-toyota-orange">DIMENSIONES</span>
           </p>
         </div>
         <div className="mb-[46px]">

@@ -24,8 +24,8 @@ export const Box5 = ({ className }: IProps) => {
         <div className="absolute | left-0 | top-0 | w-full | h-full">
           <div className="ml-[155px] | mt-[26px]">
             <p className="font-designer | text-[14px] | leading-4 | inline-block">
-              UN AUTO HECHO
-              <span className="text-toyota-orange">POSTERIOR</span>
+              un auto hecho
+              <span className="text-toyota-orange"> a tu medida</span>
             </p>
           </div>
           <div className="ml-[48px] | -mt-[12px]">
