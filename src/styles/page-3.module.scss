@@ -1,0 +1,640 @@
+$color-naranja: #ef872d;
+// @font-face {
+//   font-family: "Third Rail - Demo";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../fonts/third-rail.woff2") format("woff2"),
+//     url("../fonts/third-rail.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "Designer";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../fonts/Designer.woff2") format("woff2"),
+//     url("../fonts/Designer.otf") format("opentype");
+// }
+
+// @font-face {
+//   font-family: "Toyota Text";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../fonts/toyota-text.woff2") format("woff2"),
+//     url("../fonts/toyota-text.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "Toyota Display";
+//   font-weight: 400;
+//   font-style: normal;
+//   src: url("../fonts/toyota-display.woff2") format("woff2"),
+//     url("../fonts/toyota-display.ttf") format("truetype");
+// }
+
+
+// html,
+// body {
+//   background-color: #04141c;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// check
+.container-page {
+  width: 1194px;
+  height: 834px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#page-3,
+.page-3 {  
+  background: url("/images/03/bg_interior.webp") center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .box-bienvenido {
+    font-family: "Third Rail - Demo";
+    display: inline-block;
+    margin-top: 62px;
+    margin-left: 51px;
+    text-align: center;
+
+    .box-desc-bienvenido {
+      background-color: $color-naranja;
+      display: inline-block;
+      margin-top: 9px;
+      padding: 7px 30px 2px;
+      border-radius: 15px;
+      transform: skew(-20deg);
+
+      p {
+        transform: skew(20deg);
+        line-height: 48px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 48px;
+      line-height: 48px;
+      color: #fff;
+    }
+  }
+
+  .box-pantalla {
+    display: inline-block;
+    position: absolute;
+    top: 349px;
+    left: 58px;
+
+    .box-pantalla-title {
+      padding-left: 22px;
+      p {
+        margin: 0;
+        font-family: "Designer";
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+
+        &:nth-of-type(1) {
+          margin-left: 16px;
+        }
+
+        &:nth-of-type(2) {
+          margin-left: 8px;
+        }
+
+        &:last-child {
+          color: $color-naranja;
+        }
+      }
+    }
+
+    .box-pantalla-desc {
+      margin-top: 7px;
+      margin-left: 7px;
+      transform: skew(-15deg);
+
+      p {
+        margin: 0;
+        font-family: "Toyota Text";
+        font-size: 14px;
+        line-height: 16px;
+        color: #fff;
+      }
+    }
+  }
+
+  .box-panel {
+    position: absolute;
+    top: 312px;
+    right: 75px;
+
+    P {
+      margin: 0;
+      font-family: "Designer";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+    }
+  }
+
+  .box-aire {
+    position: absolute;
+    top: 378px;
+    right: 168px;
+
+    P {
+      margin: 0;
+      font-family: "Designer";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+
+      span {
+        color: $color-naranja;
+      }
+    }
+  }
+
+  .box-meletera {
+    position: absolute;
+    right: 0;
+    top: 410px;
+
+    .box-meletera-img {
+      position: relative;
+
+      .btn-ver-mas {
+        width: 32px;
+        height: 32px;
+        bottom: 48px;
+        left: 113px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ver-mas {
+          box-shadow: 0px 10px 28px #3f2610;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          background: $color-naranja;
+          border-radius: 9999px;
+          border: 1px rgba(255, 255, 255, 0.2) solid;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: width 0.3s ease, height 0.3s ease;
+          overflow: hidden;
+
+          &:hover {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .box-meletera-title {
+      margin-top: 16px;
+      margin-left: -8px;
+
+      p {
+        margin: 0;
+        font-family: "Designer";
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+
+        &:nth-of-type(1) {
+          margin-left: 8px;
+        }
+
+        &:last-child {
+          color: $color-naranja;
+        }
+      }
+    }
+
+    .box-meletera-desc {
+      margin-left: -19px;
+      margin-top: 3px;
+      transform: skew(-15deg);
+
+      p {
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        font-family: "Toyota Text";
+        line-height: 16px;
+      }
+    }
+  }
+
+  .box-360 {
+    position: absolute;
+    display: inline-block;
+    bottom: 46px;
+    left: 586px;
+
+    .btn-360 {
+      display: inline-block;
+      text-decoration: none;
+      width: 124.35px;
+      height: 102.04px;
+      border-radius: 15px 20px 15px 20px;
+      transform: skew(-20deg);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      .btn-360-contenido {
+        text-align: center;
+        padding: 10px;
+        transform: skew(20deg);
+
+        p {
+          margin: 0;
+          font-family: "Designer";
+          font-size: 10px;
+          line-height: 21px;
+          color: #ffffff;
+          padding-left: 13px;
+        }
+
+        .btn-360-svg {
+          margin-left: -17px;
+          margin-top: -4px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -36px;
+        left: -24px;
+        width: 178px;
+        height: 164px;
+        background: linear-gradient(
+          165deg,
+          rgba(239, 135, 45, 0.47) 0%,
+          rgba(239, 135, 45, 0) 92%
+        ); /* Degradado de fondo */
+        transform-origin: center;
+        transform: rotate(0deg); /* Rotación inicial del fondo */
+        transition: transform 0.3s ease; /* Transición de transformación */
+        transform-box: fill-box; /* Importante para ajustar el tamaño del fondo */
+      }
+
+      &:hover {
+        &::before {
+          transform: rotate(147deg); /* Rotación de fondo en hover */
+        }
+
+        #svg-360-3 {
+          fill: #ffffff;
+        }
+
+        #svg-360-2,
+        #svg-360-5 {
+          fill: $color-naranja;
+        }
+      }
+    }
+  }
+
+  .box-espacio {
+    display: flex;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+
+    .box-espacio-imgs {
+      position: relative;
+
+      .box-espacio-flip {
+        .flip-container {
+          perspective: 1000px; /* Establece la perspectiva para el efecto 3D */
+          width: 342px; /* Ancho del contenedor */
+          height: 255px; /* Alto del contenedor */
+        }
+
+        .flipper {
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d; /* Mantiene el contenido en 3D */
+          transition: transform 0.5s; /* Transición suave para el giro */
+        }
+
+        .front,
+        .back {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          backface-visibility: hidden; /* Oculta la cara posterior */
+        }
+
+        .back {
+          transform: rotateY(
+            180deg
+          ); /* Inicialmente, muestra la cara posterior */
+        }
+      }
+
+      .amplio-flechas {
+        position: absolute;
+        bottom: 2px;
+        left: 28px;
+      }
+
+      .box-btn-giro {
+        width: 32px;
+        height: 32px;
+        bottom: 24px;
+        right: 89px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-giro {
+          box-shadow: 0px 10px 28px #3f2610;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          background: $color-naranja;
+          border-radius: 9999px;
+          border: 1px rgba(255, 255, 255, 0.2) solid;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: width 0.3s ease, height 0.3s ease;
+          overflow: hidden;
+
+          svg {
+            transform-origin: center;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+            transform-box: fill-box;
+          }
+
+          &:hover {
+            // width: 30px;
+            // height: 30px;
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .box-btn-giro .btn-giro {
+          // width: 30px;
+          // height: 30px;
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        .flip-container .flipper {
+          transform: rotateY(180deg); /* Gira el contenedor en hover */
+        }
+      }
+    }
+
+    .box-espacio-contenido {
+      padding-top: 47px;
+
+      .box-espacio-titulo {
+        p {
+          margin: 0;
+          font-family: "Designer";
+          font-size: 18px;
+          line-height: 21px;
+          color: #fff;
+
+          &:nth-of-type(1) {
+            margin-left: 8px;
+          }
+
+          &:last-child {
+            color: $color-naranja;
+          }
+        }
+      }
+
+      .box-espacio-desc {
+        margin-top: 4px;
+        margin-left: -16px;
+        transform: skew(-15deg);
+
+        p {
+          margin: 0;
+          font-family: "Toyota Text";
+          font-size: 14px;
+          line-height: 16px;
+          color: #fff;
+        }
+      }
+
+      .box-espacio-footer {
+        margin-top: 28px;
+        margin-left: -30px;
+        display: flex;
+
+        .box-espacio-footer-text {
+          margin-top: 16px;
+          margin-left: 20px;
+          position: relative;
+
+          p {
+            margin: 0;
+            color: #eaeaea;
+            font-size: 11.88px;
+            line-height: 15px;
+            font-family: "Toyota Display";
+            font-weight: 900;
+          }
+
+          .box-espacio-footer-liner {
+            border: 1px solid #f78d34;
+            border-radius: 3px;
+            transform: skew(-9deg);
+            padding: 1px 5px 0px;
+            width: 85px;
+
+            p {
+              transform: skew(9deg);
+              line-height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para el modal */
+.ty-modal {
+  display: none;
+  // position: fixed;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  z-index: 1;
+
+  /* Efecto fade para mostrar el modal */
+  &.mostrar-modal {
+    animation: fadein 0.5s;
+    display: flex;
+  }
+
+  .ty-modal-contenido {
+    position: relative;
+
+    .slider-fade {
+      width: 869px;
+      margin: 0;
+
+      > div {
+        width: 869px;
+      }
+    }
+
+    .ty-cerrar-modal {
+      width: 32px;
+      height: 32px;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-origin: center;
+      transform: rotate(45deg);
+      opacity: 0.5;
+      transition: all;
+      z-index: 99;
+
+      .btn-closed {
+        box-shadow: 0px 4px 23px #3f2610;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background: #000;
+        border-radius: 9999px;
+        border: 1.5px rgba(255, 255, 255, 0.2) solid;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: width 0.3s ease, height 0.3s ease;
+        overflow: hidden;
+
+        &:hover {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .custom-next,
+    .custom-prev {
+      width: 67px;
+      height: 67px;
+      top: 45%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.7;
+      transition: all;
+      z-index: 99;
+
+      .btn-arrows {
+        box-shadow: 0px 10px 28px #3f2610;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background: #000;
+        border-radius: 20px;
+        border: 1.5px rgba(255, 255, 255, 0.2) solid;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: width 0.3s ease, height 0.3s ease;
+        overflow: hidden;
+
+        &:hover {
+          width: 67px;
+          height: 67px;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .custom-prev {
+      left: 50px;
+
+      .btn-prev {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .custom-next {
+      right: 50px;
+    }
+  }
+}
+
+.ty-content-360 {
+  width: 869px;
+  height: 500px;
+  background-color: aqua;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// @import "_animations.scss";
+// @import "_buttons.scss";

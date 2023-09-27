@@ -1,0 +1,631 @@
+$color-naranja: #ef872d;
+
+@font-face {
+  font-family: "Third Rail - Demo";
+  src: url("../fonts/third-rail.woff2") format("woff2"),
+    url("../fonts/third-rail.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Designer";
+  src: url("../fonts/Designer.woff2") format("woff2"),
+    url("../fonts/Designer.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Toyota Text";
+  src: url("../fonts/toyota-text.woff2") format("woff2"), 
+    url("../fonts/toyota-text.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Toyota Display";
+  src: url("../fonts/toyota-display.woff2") format("woff2"),
+    url("../fonts/toyota-display.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  background-color: #04141c;
+  padding: 0;
+  margin: 0;
+}
+
+.container-page {
+  width: 1194px;
+  height: 834px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#page-6 {
+  background: url("../images/page6/comprar-toyota.webp") center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .box-comprar {
+    position: absolute;
+    top: 138px;
+    left: 129px;
+
+    p {
+      color: #fff;
+      margin: 0;
+      font-family: "Third Rail - Demo";
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    .box-comprar-head {
+      display: flex;
+
+      img {
+        transform: rotate(180deg);
+        margin-right: 15px;
+      }
+    }
+
+    .box-comprar-footer {
+      display: flex;
+      padding-left: 62px;
+      margin-top: -6px;
+
+      > div {
+        background-color: #ef872d;
+        border-radius: 10px;
+        transform: skew(-22deg);
+        margin-right: 10px;
+
+        p {
+          font-size: 41px;
+          line-height: 40px;
+          transform: skew(22deg);
+          padding: 5px 27px 0px;
+        }
+      }
+    }
+  }
+
+  .btn-comprar {
+    width: 157px;
+    height: 123px;
+    border-radius: 18px 8px 15px 3px;
+    transform: skew(-11deg);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    .btn-comprar-content {
+      transform: skew(11deg);
+      text-align: center;
+      padding-top: 24px;
+
+      .btn-ico {
+        img {
+          transition: transform 0.3s ease; /* Transición de transformación */
+        }
+      }
+
+      .btn-comprar-title {
+        margin-top: 13px;
+        margin-left: -19px;
+
+        p {
+          margin: 0;
+          color: #fff;
+          font-size: 9px;
+          font-family: "Designer";
+          line-height: 13px;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -41px;
+      left: -25px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(
+        170deg,
+        rgba(239, 135, 45, 0.4) 0%,
+        rgba(239, 135, 45, 0) 95%
+      ); /* Degradado de fondo */
+      transform-origin: center;
+      transform: rotate(0deg); /* Rotación inicial del fondo */
+      transition: transform 0.3s ease; /* Transición de transformación */
+      transform-box: fill-box; /* Importante para ajustar el tamaño del fondo */
+    }
+
+    &:hover {
+      &::before {
+        transform: rotate(147deg); /* Rotación de fondo en hover */
+      }
+
+      .btn-comprar-content {
+        .btn-comprar-ico {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  .box-garantia {
+    position: absolute;
+    top: 311px;
+    left: 53px;
+  }
+
+  .box-excelente {
+    position: absolute;
+    top: 311px;
+    left: 232px;
+  }
+
+  .box-programa {
+    position: absolute;
+    top: 311px;
+    left: 408px;
+    .btn-comprar-content {
+      padding-top: 29px;
+    }
+  }
+
+  .box-pago {
+    position: absolute;
+    top: 450px;
+    left: 131px;
+    .btn-comprar-content {
+      padding-top: 20px;
+    }
+  }
+
+  .box-servicio {
+    position: absolute;
+    top: 450px;
+    left: 305px;
+    .btn-comprar-content {
+      padding-top: 25px;
+    }
+  }
+
+  .box-logo {
+    position: absolute;
+    right: 161px;
+    top: 43px;
+  }
+
+  .box-auto-one {
+    position: absolute;
+    right: 310px;
+    top: 171px;
+    cursor: pointer;
+  }
+
+  .box-auto-two {
+    position: absolute;
+    right: 37px;
+    top: 169px;
+    cursor: pointer;
+  }
+
+  .btn-auto {
+    transform-origin: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    transform-box: fill-box;
+    &.opacity-05 {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .box-btns-autos {
+    position: absolute;
+    top: 361px;
+    right: 68px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn-efecto-one {
+    width: 148px;
+    height: 32px;
+    border-radius: 5px;
+    transform: skew(-22deg);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(
+      82.38deg,
+      rgba(239, 135, 45, 0.79) -26.76%,
+      rgba(239, 135, 45, 0.17) 62.62%
+    );
+
+    p {
+      margin: 0;
+      color: #fff;
+      font-size: 10px;
+      font-family: "Designer";
+      line-height: 21px;
+      padding: 7px 0px;
+      transform: skew(22deg);
+
+      span {
+        color: $color-naranja;
+      }
+    }
+
+    &.active,
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .box-infomacion-autos {
+    position: absolute;
+    bottom: 111px;
+    right: 30px;
+
+    .box-infomacion-autos-img {
+      width: 542px;
+      height: 288px;
+      overflow: auto;
+      overflow-x: hidden;
+      position: relative;
+
+      img {
+        max-width: 100%;
+      }
+
+      /* Cambia el ancho y color del scroll vertical */
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #663e14;
+        border-radius: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #663e14;
+      }
+
+      &::after {
+        content: "";
+        width: 119px;
+        height: 624px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 186px;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      &.auto-one {
+        &::after {
+          opacity: 1;
+          width: 236px;
+          transform: translateX(117px);
+        }
+      }
+
+      &.auto-two {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para el modal */
+.ty-cerrar-modal-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  z-index: 1;
+  animation: fadein 0.5s;
+  opacity: 0;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.ty-modal-two {
+  display: flex;
+  // position: fixed;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-500px);
+  transition: transform 0.5s ease, opacity 0.3s ease;
+
+  /* Efecto fade para mostrar el modal */
+  &.show-modal {
+    display: flex;
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0px);
+  }
+
+  .ty-modal-box {
+    min-width: 500px;
+    height: 544px;
+    position: relative;
+    border-radius: 15px;
+    transform: skew(-5deg);
+    background: linear-gradient(
+      122.61deg,
+      #703400 8.3%,
+      rgba(89, 41, 0, 0.65) 127.2%,
+      rgba(89, 41, 0, 0.8) 127.2%
+    );
+    box-sizing: border-box;
+
+    .ty-modal-contenido {
+      transform: skew(5deg);
+      height: 100%;
+      width: 100%;
+
+      .ty-modal-content {
+        text-align: center;
+        padding-top: 96px;
+        box-sizing: border-box;
+
+        .ty-modal-content-img {
+          img {
+            transform: scale(2);
+          }
+        }
+
+        .ty-modal-title {
+          margin-top: 45px;
+
+          p {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+            font-family: "Designer";
+            line-height: 30px;
+          }
+        }
+
+        .ty-modal-text {
+          padding-top: 31px;
+          transform: skew(-5deg);
+          margin-left: -5px;
+
+          p {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            font-family: "Toyota Text";
+
+            span {
+              color: #ffe1b4;
+              vertical-align: super; /* Alinea el texto en la parte superior (como un exponente) */
+              font-size: 70%;
+            }
+          }
+        }
+
+        .ty-moda-text-small {
+          padding-top: 20px;
+          transform: skew(-5deg);
+          margin-left: -5px;
+
+          p {
+            color: #fff;
+            margin: 0;
+            font-size: 15px;
+            font-family: "Toyota Text";
+            font-style: italic;
+
+            span {
+              color: #ffe1b4;
+              vertical-align: super; /* Alinea el texto en la parte superior (como un exponente) */
+              font-size: 70%;
+            }
+          }
+        }
+      }
+
+      .ty-modal-content-flex {
+        display: flex;
+        gap: 60px;
+        padding: 29px 34px;
+
+        h2,
+        h3,
+        p {
+          margin: 0;
+          font-size: 14px;
+          font-family: "Toyota Text";
+          font-weight: 400;
+          color: #fff;
+        }
+
+        .ty-modal-content-one {
+          text-align: center;
+          padding-top: 30px;
+
+          .ty-modal-content-img {
+            img {
+              transform: scale(1.5);
+            }
+          }
+
+          .ty-modal-title {
+            padding-top: 25px;
+            p {
+              font-size: 20px;
+              font-family: "Designer";
+              font-weight: 400;
+              line-height: 26px;
+            }
+          }
+
+          .ty-modal-desc-one {
+            transform: skew(-5deg);
+            text-align: left;
+            padding-top: 25px;
+
+            h2 {
+              color: $color-naranja;
+              font-weight: 700;
+              margin-bottom: 25px;
+            }
+            h3 {
+              color: $color-naranja;
+            }
+
+            .ty-modal-text {
+              padding-bottom: 25px;
+            }
+          }
+        }
+
+        .ty-modal-content-two {
+          transform: skew(-5deg);
+
+          h2 {
+            color: $color-naranja;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+
+            &::before {
+              content: "";
+              width: 5px;
+              height: 5px;
+              background-color: $color-naranja;
+              border-radius: 50%;
+              position: absolute;
+              left: 5px;
+              top: 6px;
+            }
+          }
+
+          ul {
+            li {
+              &::marker {
+                color: $color-naranja;
+              }
+              margin: 0;
+              font-size: 14px;
+              font-family: "Toyota Text";
+              font-weight: 400;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .ty-cerrar-modal {
+        width: 50px;
+        height: 50px;
+        bottom: 40px;
+        left: 41%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center;
+        transform: rotate(45deg);
+        opacity: 0.4;
+        transition: all;
+        z-index: 99;
+
+        .btn-closed {
+          box-shadow: 0px 4px 23px #3f2610;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          background: #000;
+          border-radius: 9999px;
+          border: 1.5px rgba(255, 255, 255, 0.2) solid;
+          box-sizing: border-box;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: width 0.3s ease, height 0.3s ease;
+          overflow: hidden;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+
+          .btn-closed {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#modal-programa {
+  .ty-modal-content {
+    .ty-modal-title {
+      margin-top: 25px;
+    }
+
+    .ty-modal-text {
+      padding-top: 20px;
+    }
+  }
+}
+
+#modal-servicio {
+  .ty-modal-contenido {
+    .ty-cerrar-modal {
+      bottom: 25px;
+      left: 44%;
+    }
+  }
+}
+
+@import "_animations.scss";
+@import "_buttons.scss";

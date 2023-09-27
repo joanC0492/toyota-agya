@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Designer";
+  src: url("/fonts/Designer.woff2") format("woff2"),
+    url("/fonts/Designer.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ToyotaText-regular";
+  src: url("/fonts/ToyotaText_Rg.woff2") format("woff2"),
+    url("/fonts/ToyotaText_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ToyotaText-regular-i";
+  src: url("/fonts/ToyotaText_It.woff2") format("woff2"),
+    url("/fonts/ToyotaText_It.ttf") format("truetype");
+}
+@font-face {
+  font-family: "thirdrail-demo";
+  src: url("/fonts/thirdrail-demo.woff2") format("woff2"),
+    url("/fonts/thirdrail-demo.ttf") format("truetype");
+}
+
+@layer base {
+  body {
+    @apply bg-toyota-main;
+  }
+  img {
+    @apply select-none pointer-events-none;
+  }
+}
+
+@layer components {
+  /*-----------------SLIDER-----------------*/
+  .swiper-slide .my-slider {
+    opacity: 0;
+  }
+  .swiper-slide.swiper-slide-active .my-slider {
+    opacity: 1;
+  }
+
+  /*-----------------BACKGROUND-----------------*/
+  .bg-gradient-prev {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .bg-gradient-next {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .gradient-orange {
+    background: linear-gradient(
+      307deg,
+      #f28b28 10.2%,
+      rgba(242, 139, 40, 0) 98.7%
+    );
+  }
+
+  .parentesis {
+    @apply text-toyota-orange font-text-regular-i font-bold;
+  }
+
+  /*-----------------BOTONES-----------------*/
+  .btn-toyota {
+    @apply rounded py-1 px-3 ease-in-out duration-200;
+  }
+
+  .btn-change-page-prev {
+    @apply absolute top-0 w-[122px] h-full;
+  }
+  .btn-change-page-prev > div:first-child {
+    @apply bg-gradient-prev;
+    transition: all 0.35s;
+    opacity: 0;
+    transform-origin: left;
+  }
+  .btn-change-page-prev {
+    svg {
+      transform: scale(0) translateX(-100px);
+      transition: all 0.2s;
+    }
+    &:hover {
+      & > div:first-child {
+        opacity: 1;
+      }
+      & svg {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .btn-change-page-next {
+    @apply absolute top-0 w-[122px] h-full;
+  }
+  .btn-change-page-next > div:first-child {
+    @apply bg-gradient-next;
+    transition: all 0.35s;
+    opacity: 0;
+  }
+  .btn-change-page-next {
+    svg {
+      transform: scale(0) translateX(100px);
+      transition: all 0.2s;
+    }
+    &:hover {
+      & > div:first-child {
+        opacity: 1;
+      }
+      & svg {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .btn-primary {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: skew(-22deg);
+  }
+  .btn-primary div:first-child {
+    transform: skew(22deg);
+  }
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      39deg,
+      rgba(0, 0, 0, 0.4) 18.92%,
+      rgba(0, 0, 0, 0) 83.2%
+    );
+    /*border: 1px solid #f68d35;*/
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 0;
+    border-style: solid;
+    border-color: #f68d35;
+    border-radius: 6px;
+  }
+  .btn-primary:hover::before {
+    background: linear-gradient(
+      311deg,
+      rgba(255, 125, 0, 0.5) 20.64%,
+      rgba(255, 125, 0, 0) 81.57%
+    );
+  }
+  .btn-primary.active::before {
+    background: linear-gradient(
+      311deg,
+      rgba(255, 125, 0, 0.5) 20.64%,
+      rgba(255, 125, 0, 0) 81.57%
+    );
+  }
+  .btn-primary.active-title::before {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    background: linear-gradient(
+      144deg,
+      rgba(239, 135, 45, 0.8) 12.65%,
+      rgba(239, 135, 45, 0) 107.93%
+    );
+  }
+
+  // .modal-colores {
+  // }
+  #modal {
+    // [class*="modal-"]:not(.modal-dimensiones) {
+    opacity: 0;
+    transform: translateY(-800px);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    transition-delay: 0.1s;
+    &.animate {
+      transform: translateY(0px);
+      opacity: 1;
+      z-index: 10;
+      z-index: 60;
+    }
+  }
+
+  .modal-colores .swiper-button-next {
+    background-image: url("/images/arrow-right-white.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 49px;
+    height: 49px;
+    right: 130px;
+    &:hover {
+      transition: all 0.25s;
+      transform: scale(1.1885);
+      // transform: scale(1.2885);
+    }
+  }
+  .modal-colores .swiper-button-prev {
+    background-image: url("/images/arrow-left-white.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 49px;
+    height: 49px;
+    left: 130px;
+    &:hover {
+      transition: all 0.25s;
+      transform: scale(1.1885);
+      // transform: scale(1.2885);
+    }
+  }
+
+  .modal-colores .swiper-button-next::after,
+  .modal-colores .swiper-button-prev::after {
+    display: none;
+  }
+
+  /*-----------------Animaciones-----------------*/
+  .load-page-fade {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-aro {
+    opacity: 0;
+    animation-name: animateAro;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /*La animación tiene una velocidad constante a lo largo de toda su duración.*/
+    animation-timing-function: linear;
+    /* El elemento mantendrá el estado final de la animación.*/
+    animation-fill-mode: forwards;
+  }
+  @keyframes animateAro {
+    0% {
+      opacity: 0;
+      transform: translateX(0) rotate(0deg);
+    }
+    25% {
+      opacity: 0.25;
+      transform: translateX(163px) rotate(90deg);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(327px) rotate(180deg);
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateX(491px) rotate(270deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(655px) rotate(360deg);
+    }
+  }
+
+  .fade-block {
+    /* animation: fadein 2s linear forwards; */
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1.75s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .scale-block {
+    transform: translateY(calc(100% + 8px));
+    transform-origin: bottom;
+    animation-name: scaleBlock;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes scaleBlock {
+    0% {
+      transform: translateY(calc(100% + 8px));
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .zoom-block {
+    animation-name: zoomBlock;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+  @keyframes zoomBlock {
+    0% {
+      transform: scale(1.25);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.25);
+    }
+  }
+
+  .skew {
+    transform: skew(-10deg);
+  }
+  /*--------------------------PAGE-04--------------------------*/
+  .page-04-card-title {
+    @apply [&_.card-b-1]:left-4 [&_.card-b-2]:left-12 [&_.card-b-3]:left-[38px] [&_.card-b-4]:left-4 [&_.card-b-img-1]:-left-[12px] [&_.card-b-img-2]:-left-[20px] [&_.card-b-img-3]:-left-[28px] [&_.card-b-img-4]:-left-[28px] [&_.card-b-text-3]:px-4;
+  }
+}
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+  /*-----------------Fuentes-----------------*/
+  .font-designer {
+    font-family: "Designer";
+  }
+  .font-text-regular {
+    font-family: "ToyotaText-regular";
+  }
+  .font-text-regular-i {
+    font-family: "ToyotaText-regular-i";
+  }
+  .font-thirdrail {
+    font-family: "thirdrail-demo";
+  }
+}
+
+@import "_buttons.scss";
