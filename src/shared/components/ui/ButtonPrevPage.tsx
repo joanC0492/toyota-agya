@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface IProps {
   url: string;
 }
@@ -7,12 +5,14 @@ export const ButtonPrevPage = ({ url }: IProps) => {
   return (
     <a
       className="z-40 left-0 btn-change-page-prev"
+      id={`boton_regresar_pagina_${url === "/" ? "1" : url.split("-").pop()}`}
       href={url}
       data-nombreboton={`boton prev ${
         url === "/" ? "page-1" : url.split("/")[1]
       }`}>
       <div className="w-full h-full flex items-center">
-        <div className="ml-6">
+        {/* <div className="ml-6"> */}
+        <div className="ml-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"

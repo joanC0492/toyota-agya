@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Layout } from "@/shared/components/layouts";
 import { Page2 } from "@/shared/components/pages/page-2";
 import initAnimate from "@/shared/hooks/animacion-page-2";
+import Head from "next/head";
 
 const DisenoExteriorPage: NextPage = () => {
   const [image, setImage] = useState<string>("diseno-exterior-on.webp");
@@ -29,6 +30,15 @@ const DisenoExteriorPage: NextPage = () => {
       prevUrl="/"
       nextUrl="/page-3"
       className="w-[1194px] h-[834px]">
+      <Head>
+        <title>
+          Descubre Cómo Tu Nuevo Toyota AGYA se Adapta a Tu Estilo de Vida
+        </title>
+        <meta
+          name="description"
+          content="Experimenta cómo el nuevo Toyota Agya se adapta a tu estilo de vida. ¡Déjate Impresionar con su Look Distintivo y Aros de 14”"
+        />
+      </Head>
       <Page2 className="relative | text-white">
         <Image
           src={`/images/02/${image}`}

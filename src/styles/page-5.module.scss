@@ -1,42 +1,34 @@
 $color-naranja: #ef872d;
-
 @font-face {
   font-family: "Third Rail - Demo";
-  src: url("../fonts/third-rail.woff2") format("woff2"),
-    url("../fonts/third-rail.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/third-rail.woff2") format("woff2"),
+    url("/fonts/third-rail.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Designer";
-  src: url("../fonts/Designer.woff2") format("woff2"),
-    url("../fonts/Designer.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/Designer.woff2") format("woff2"),
+    url("/fonts/Designer.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Toyota Text";
-  src: url("../fonts/toyota-text.woff2") format("woff2"),
-    url("../fonts/toyota-text.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/toyota-text.woff2") format("woff2"),
+    url("/fonts/toyota-text.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Toyota Display";
-  src: url("../fonts/toyota-display.woff2") format("woff2"),
-    url("../fonts/toyota-display.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-}
-
-html,
-body {
-  background-color: #04141c;
-  padding: 0;
-  margin: 0;
+  src: url("/fonts/toyota-display.woff2") format("woff2"),
+    url("/fonts/toyota-display.ttf") format("truetype");
 }
 
 .container-page {
@@ -44,11 +36,6 @@ body {
   height: 834px;
   margin: 0 auto;
   position: relative;
-}
-
-h2,
-p {
-  margin: 0;
 }
 
 .color-orange {
@@ -124,9 +111,8 @@ p {
   }
 }
 
-#page-5 {
-  // background: url("../images/page5/debequedar.jpg") center;
-  background: url("../images/page5/performance.webp") center;
+.page-5 {
+  background: url("/images/05/performance.webp") center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -169,10 +155,15 @@ p {
       border-radius: 10px;
       transform: skew(-27deg);
       padding: 6px 31px;
-
+      position: relative;
       p {
         transform: skew(27deg);
         line-height: 50px;
+      }
+      .tilde {
+        position: absolute;
+        left: 358px;
+        top: 5px;
       }
     }
   }
@@ -397,7 +388,6 @@ p {
 
 .ty-modal-two {
   display: flex;
-  // position: fixed;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -536,6 +526,3 @@ p {
     }
   }
 }
-
-@import "_animations.scss";
-@import "_buttons.scss";

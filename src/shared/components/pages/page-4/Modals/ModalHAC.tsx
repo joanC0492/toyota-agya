@@ -9,11 +9,12 @@ export const ModalHAC = ({ className = "" }: IProps) => {
   const { closeModal } = useUIContext();
   return (
     <div
-      className={`${className} | relative | w-[calc(871px-50px)] | -skew-x-[5.5deg] | h-[544px] | rounded-tl-[36px] | rounded-br-[36px] | rounded-tr-[16px] | rounded-bl-[16px]`}
-      style={{
-        background:
-          "linear-gradient(112deg, #703400 6.1%, rgba(89, 41, 0, 0.65) 93.55%, rgba(89, 41, 0, 0.80) 93.55%)",
-      }}>
+      className={`${className} | relative | w-[calc(871px-50px)] | -skew-x-[5.5deg] | h-[544px] | rounded-tl-[36px] | rounded-br-[36px] | rounded-tr-[16px] | rounded-bl-[16px] | | bg-toyota-brown/80`}
+      // style={{
+      //   background:
+      //     "linear-gradient(112deg, #703400 6.1%, rgba(89, 41, 0, 0.65) 93.55%, rgba(89, 41, 0, 0.80) 93.55%)",
+      // }}
+      >
       <div className="skew-x-[5.5deg] | text-white">
         <div className="mt-20">
           <p className="font-designer | text-2xl | text-center">
@@ -24,7 +25,7 @@ export const ModalHAC = ({ className = "" }: IProps) => {
         </div>
         <div className="mb-[46px]">
           <Image
-            src="/images/04/img-modal-02.gif"
+            src="/images/04/agya_hac.gif"
             width={584}
             height={385}
             alt="Modal Card 01"

@@ -1,16 +1,19 @@
 interface IProps {
   onClick?: () => void;
+  id?: string;
   className?: string;
   dataNombreBoton?: string;
 }
 export const IconModal = ({
   onClick = () => {},
+  id = "",
   className = "",
   dataNombreBoton = "",
 }: IProps) => {
   return (
     <div className={className}>
       <button
+        id={id}
         onClick={onClick}
         className="relative"
         data-nombreboton={dataNombreBoton}>

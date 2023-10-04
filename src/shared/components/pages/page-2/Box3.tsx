@@ -24,6 +24,7 @@ export const Box3 = ({ className = "" }: IProps) => {
         <div className="absolute | left-0 | right-0 | top-8 | z-20">
           <div className="relative | ml-[232px] | mb-[16px]">
             <IconModal
+              id="boton_ver_aros_de_alineacion_de_14"
               className="absolute | bottom-[calc(100%-10px)] | -left-[40px]"
               dataNombreBoton="boton open modal aros de aleación de 14"
               onClick={() => openModal("diseno-exterior-aleacion")}

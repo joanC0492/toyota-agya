@@ -32,11 +32,11 @@ export const Layout = ({
         />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta
+        {/* <meta
           name="description"
           content="Conoce ahora las características del nuevo Toyota Agya 2023, el auto creado para llevar tu estilo a donde quieras; ingresa para conocer todos sus detalles."
-        />
-        <title>Toyota AGYA</title>
+        /> */}
+        {/* <title>Toyota AGYA</title> */}
       </Head>
       <div className="relative | w-[1194px] | h-[834px] | mx-auto | overflow-hidden">
         <div className="flex justify-center">

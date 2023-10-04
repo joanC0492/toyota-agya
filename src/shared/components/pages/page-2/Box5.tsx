@@ -48,11 +48,13 @@ export const Box5 = ({ className }: IProps) => {
           </div>
           <div className="ml-[43px] | -mt-[15px] | flex | gap-x-[14px]">
             <ButtonPrimary
+              id="boton_ver_dimensiones"
               text="VER DIMENSIONES"
               dataNombreBoton="boton open modal ver dimensiones"
               handleClick={() => openModal("diseno-exterior-dimensiones")}
             />
             <ButtonPrimary
+              id="boton_ver_mas_colores"
               text="VER MÁS COLORES"
               dataNombreBoton="boton open modal ver mas colores"
               handleClick={() => openModal("diseno-exterior-colores")}

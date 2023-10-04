@@ -6,7 +6,8 @@ interface IProps extends ICard {
   className?: string;
 }
 export const CardBottom = ({
-  id,
+  id = "",
+  cardId,
   title,
   widthTitle,
   text,
@@ -22,7 +23,7 @@ export const CardBottom = ({
     3: "04-vsc",
     4: "04-trc",
   };
-  const modalActive: TypeModal = objModal[id];
+  const modalActive: TypeModal = objModal[cardId];
 
   return (
     <div className={`relative | ${className}`}>
@@ -31,13 +32,13 @@ export const CardBottom = ({
         <div className="skew-x-[23.5deg] | pt-[30px]">
           <div className="mx-auto mb-2" style={{ width: widthTitle }}>
             <h3
-              className={`card-b-${id} | relative | font-designer | text-[15px] | text-center`}
+              className={`card-b-${cardId} | relative | font-designer | text-[15px] | text-center`}
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
           <div className="text-center mb-2">
             <p
-              className={`card-b-text-${id} | font-text-regular | text-sm | -skew-x-[15.5deg] | pl-6 | pr-4`}>
+              className={`card-b-text-${cardId} | font-text-regular | text-sm | -skew-x-[15.5deg] | pl-6 | pr-4`}>
               {text}
             </p>
           </div>
@@ -45,12 +46,13 @@ export const CardBottom = ({
             <img
               src={`/images/04/${img}.webp`}
               alt={title}
-              className={`card-b-img-${id} | inline-block | relative`}
+              className={`card-b-img-${cardId} | inline-block | relative`}
             />
           </div>
         </div>
       </div>
       <ButtonSecondary
+        id={id}
         className="absolute | left-1/2 | -top-2 | translate-x-[100%]"
         onClick={() => openModal(modalActive)}
         dataNombreBoton={dataNombreBoton}

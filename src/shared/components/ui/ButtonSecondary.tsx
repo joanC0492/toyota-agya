@@ -1,10 +1,12 @@
 interface IProps {
+  id?: string;
   className?: string;
   dataNombreBoton?: string;
   onClick: () => void;
 }
 
 export const ButtonSecondary = ({
+  id = "",
   className = "",
   onClick,
   dataNombreBoton = "",
@@ -12,6 +14,7 @@ export const ButtonSecondary = ({
   return (
     <div className={className}>
       <button
+        id={id}
         className="bg-toyota-orange | w-6 | h-6 | rounded-full | flex | items-center | justify-center | border | border-white/20 | border-solid | transition-all | duration-300 | overflow-hidden | hover:scale-[1.25]"
         onClick={onClick}
         data-nombreboton={dataNombreBoton}>

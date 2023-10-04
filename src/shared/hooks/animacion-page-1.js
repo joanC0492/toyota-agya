@@ -1,19 +1,16 @@
 const divConfigurations = [
   {
-    element: "itemlist-1",
-    // delay: 500,
+    element: "itemlist-1",    
     delay: 1750,
     duration: 1000,
   },
   {
-    element: "itemlist-2",
-    // delay: 1250,
+    element: "itemlist-2",    
     delay: 2500,
     duration: 1000,
   },
   {
-    element: "itemlist-3",
-    // delay: 2000,
+    element: "itemlist-3",    
     delay: 3250,
     duration: 1000,
   },

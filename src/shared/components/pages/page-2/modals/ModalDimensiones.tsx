@@ -14,7 +14,8 @@ export const ModalDimensiones = ({ className }: IProps) => {
       style={{
         background:
           "linear-gradient(112deg, #703400 6.1%, rgba(89, 41, 0, 0.65) 93.55%, rgba(89, 41, 0, 0.80) 93.55%)",
-      }}>
+      }}
+      >
       <div className="skew-x-[5.5deg] | text-white">
         <div className="mt-20 | mb-[52px]">
           <p className="font-designer | text-2xl | text-center">

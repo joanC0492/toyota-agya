@@ -2,17 +2,20 @@ import Image from "next/image";
 
 interface IProps {
   onClick: () => void;
+  id?: string;
   className?: string;
   dataNombreboton?: string;
 }
 export const ButtonPlay = ({
   onClick,
+  id = "",
   className = "",
   dataNombreboton = "",
 }: IProps) => {
   return (
     <div className={className}>
       <button
+        id={id}
         className="group | w-10 | h-10 | relative | rounded-full | overflow-hidden | inline-flex | items-center | justify-center | transition-all | duration-500 | scale-[0.7] | hover:scale-100"
         onClick={onClick}
         data-nombreboton={dataNombreboton}>

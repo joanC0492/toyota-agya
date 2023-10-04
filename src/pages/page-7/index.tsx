@@ -3,12 +3,23 @@ import { NextPage } from "next";
 import Image from "next/image";
 import { Page7 } from "@/shared/components/pages/page-7";
 import { Layout } from "@/shared/components/layouts";
+import Head from "next/head";
 
 const Page07: NextPage = () => {
   const { openModal } = useUIContext();
 
   return (
     <Layout title="" prevUrl="/page-6" className="w-[587px] | h-[831px]">
+      <Head>
+        <title>
+          Nuevo Toyota AGYA: Inicia Tu Nuevo Viaje, Cotiza y Busca
+          Concesionarios
+        </title>
+        <meta
+          name="description"
+          content="Es hora de iniciar tu nuevo viaje con Toyota Agya. Cotiza tu vehículo y encuentra concesionarios cercanos hacia una experiencia de conducción excepcional."
+        />
+      </Head>
       <Page7 className="relative">
         <Image
           src={`/images/07/contraportada.webp`}

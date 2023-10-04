@@ -1,42 +1,34 @@
 $color-naranja: #ef872d;
-
 @font-face {
   font-family: "Third Rail - Demo";
-  src: url("../fonts/third-rail.woff2") format("woff2"),
-    url("../fonts/third-rail.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/third-rail.woff2") format("woff2"),
+    url("/fonts/third-rail.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Designer";
-  src: url("../fonts/Designer.woff2") format("woff2"),
-    url("../fonts/Designer.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/Designer.woff2") format("woff2"),
+    url("/fonts/Designer.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Toyota Text";
-  src: url("../fonts/toyota-text.woff2") format("woff2"), 
-    url("../fonts/toyota-text.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  src: url("/fonts/toyota-text.woff2") format("woff2"),
+    url("/fonts/toyota-text.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Toyota Display";
-  src: url("../fonts/toyota-display.woff2") format("woff2"),
-    url("../fonts/toyota-display.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-}
-
-html,
-body {
-  background-color: #04141c;
-  padding: 0;
-  margin: 0;
+  src: url("/fonts/toyota-display.woff2") format("woff2"),
+    url("/fonts/toyota-display.ttf") format("truetype");
 }
 
 .container-page {
@@ -46,13 +38,18 @@ body {
   position: relative;
 }
 
-#page-6 {
-  background: url("../images/page6/comprar-toyota.webp") center;
+.page-6 {
+  --imagen-fondo: url("/images/06/comprar-toyota.webp");
+  background: var(--imagen-fondo) center;
   background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  .no-bg {
+    background: url("/images/06/comprar-toyota-2.webp") center;
+  }
 
   .box-comprar {
     position: absolute;
@@ -69,10 +66,15 @@ body {
 
     .box-comprar-head {
       display: flex;
-
-      img {
+      position: relative;
+      img:not(.tilde) {
         transform: rotate(180deg);
         margin-right: 15px;
+      }
+      .tilde {
+        position: absolute;
+        left: 154px;
+        top: 0.25px;
       }
     }
 
@@ -211,16 +213,14 @@ body {
 
   .box-auto-one {
     position: absolute;
-    right: 310px;
-    top: 171px;
-    cursor: pointer;
+    right: 115px;
+    top: 108px;
   }
 
   .box-auto-two {
     position: absolute;
     right: 37px;
     top: 169px;
-    cursor: pointer;
   }
 
   .btn-auto {
@@ -231,17 +231,18 @@ body {
     &.opacity-05 {
       opacity: 0.5;
     }
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.1);
+    .car-main {
+      display: none;
+      &.active {
+        display: block;
+      }
     }
   }
 
   .box-btns-autos {
     position: absolute;
-    top: 361px;
-    right: 68px;
+    top: 383px;
+    right: 158px;
     display: flex;
     gap: 16px;
   }
@@ -275,26 +276,39 @@ body {
       }
     }
 
-    &.active,
-    &:hover {
+    &.no-active {
       opacity: 0.5;
+    }
+    &.active {
+      opacity: 1;
     }
   }
 
   .box-infomacion-autos {
     position: absolute;
-    bottom: 111px;
     right: 30px;
+    bottom: 187px;
 
     .box-infomacion-autos-img {
-      width: 542px;
-      height: 288px;
+      width: 547px;
+      height: 110px;
       overflow: auto;
       overflow-x: hidden;
       position: relative;
 
       img {
         max-width: 100%;
+      }
+
+      .after {        
+        width: 119px;        
+        height: 629px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 188px;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.3s ease;
       }
 
       /* Cambia el ancho y color del scroll vertical */
@@ -314,11 +328,11 @@ body {
       &::after {
         content: "";
         width: 119px;
-        height: 624px;
+        height: 629px;
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 186px;
+        left: 188px;
         background-color: rgba(0, 0, 0, 0.7);
         transition: all 0.3s ease;
         opacity: 0;
@@ -327,7 +341,7 @@ body {
       &.auto-one {
         &::after {
           opacity: 1;
-          width: 236px;
+          width: 237px;
           transform: translateX(117px);
         }
       }
@@ -362,18 +376,10 @@ body {
 
 .ty-modal-two {
   display: flex;
-  // position: fixed;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  top: 0px;
-  left: 0;
   z-index: 2;
   width: 100%;
-  opacity: 0;
-  transform: translateY(-500px);
-  transition: transform 0.5s ease, opacity 0.3s ease;
-
   /* Efecto fade para mostrar el modal */
   &.show-modal {
     display: flex;
@@ -434,6 +440,7 @@ body {
             color: #fff;
             font-size: 16px;
             font-family: "Toyota Text";
+            line-height: 20px;
 
             span {
               color: #ffe1b4;
@@ -483,6 +490,22 @@ body {
           text-align: center;
           padding-top: 30px;
 
+          .ty-modal-title-parent {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 30px;
+            width: 324px;
+            margin: auto;
+            img {
+              position: relative;
+              top: -4px;
+            }
+            .ty-modal-title {
+              text-align: left;
+              padding-top: 0;
+            }
+          }
+
           .ty-modal-content-img {
             img {
               transform: scale(1.5);
@@ -511,6 +534,23 @@ body {
             }
             h3 {
               color: $color-naranja;
+            }
+            .last {
+              color: #ef872d;
+              font-weight: 700;
+              position: relative;
+              padding-left: 15px;
+              margin-top: 20px;
+              &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #ef872d;
+                border-radius: 50%;
+                position: absolute;
+                left: 5px;
+                top: 6px;
+              }
             }
 
             .ty-modal-text {
@@ -558,8 +598,8 @@ body {
       .ty-cerrar-modal {
         width: 50px;
         height: 50px;
-        bottom: 40px;
-        left: 41%;
+        top: 30px;
+        right: 5px;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -606,19 +646,19 @@ body {
   }
 }
 
-#modal-programa {
+.modal-programa {
   .ty-modal-content {
     .ty-modal-title {
-      margin-top: 25px;
+      margin-top: 25px !important;
     }
 
     .ty-modal-text {
-      padding-top: 20px;
+      padding-top: 20px !important;
     }
   }
 }
 
-#modal-servicio {
+.modal-servicio {
   .ty-modal-contenido {
     .ty-cerrar-modal {
       bottom: 25px;
@@ -627,5 +667,176 @@ body {
   }
 }
 
-@import "_animations.scss";
-@import "_buttons.scss";
+.btn-modal-redirect {
+  border: none;
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(
+    42deg,
+    rgba(239, 135, 45, 0.79) 0%,
+    rgba(239, 135, 45, 0.17) 100%
+  );
+  border-radius: 10px;
+  transform: skew(-25deg);
+  padding: 3px 18px 3px 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .btn-plus-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transform: skew(25deg);
+
+    .btn-icon-plus {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon-plus {
+        box-shadow: 0px 10px 28px #3f2610;
+        width: 31px;
+        height: 31px;
+        background: #000;
+        border-radius: 9999px;
+        border: 1px rgba(255, 255, 255, 0.2) solid;
+        opacity: 0.5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: width 0.3s ease, height 0.3s ease;
+        overflow: hidden;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 10px;
+      font-family: "Designer";
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(
+      42deg,
+      rgb(155 81 17 / 84%) 0%,
+      rgb(239 135 45 / 25%) 100%
+    );
+
+    .btn-icon-plus {
+      .icon-plus {
+        width: 40px;
+        height: 38px;
+        opacity: 1;
+      }
+    }
+  }
+  &-parent {
+    width: 156.48px;
+    margin-inline: auto;
+    margin-top: 35px;
+  }
+}
+
+.modal-servicio {
+  .ty-cerrar-modal {
+    top: 18px !important;
+    bottom: initial !important;
+    left: initial !important;
+  }
+  .ty-modal-text {
+    h2 {
+      line-height: 18px !important;
+    }
+    p {
+      line-height: 17.5px !important;
+    }
+  }
+  .ty-modal-content-two {
+    padding-top: 32px !important;
+  }
+  .column-2-title {
+    position: relative;
+  }
+  .btn-modal-redirect-parent {
+    transform: skew(5deg);
+    margin-top: -24px !important;
+    margin-left: auto;
+    margin-right: 19px;
+    &.column-2 {
+      position: absolute;
+      left: 179px !important;
+      top: 23px !important;
+    }
+  }
+  .btn-plus-content {
+    p {
+      font-family: "Designer" !important;
+      font-size: 10px !important;
+    }
+  }
+
+  .list {
+  }
+
+  .list-item {
+    position: relative;
+    padding-left: 3px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      top: 9px;
+      border-radius: 100%;
+      width: 5px;
+      height: 5px;
+      background-color: #ef872d;
+    }
+  }
+}
+
+.modal-imagen {
+  .ty-modal-box {
+    min-width: 930px;
+    background: linear-gradient(
+      110deg,
+      #000 5.65%,
+      rgba(23, 11, 0, 0.65) 46.16%,
+      rgba(0, 0, 0, 0.8) 86.67%
+    );
+  }
+
+  .ty-modal-content-flex {
+    padding: 13px 34px;
+  }
+
+  .ty-cerrar-modal {
+    top: 22px;
+    right: 3px;
+  }
+
+  .modal-imagen__cuadro {
+    position: relative;
+    left: 42px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 450px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #663e14;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #663e14;
+    }
+  }
+}

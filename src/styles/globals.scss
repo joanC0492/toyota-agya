@@ -76,7 +76,8 @@
   }
 
   .btn-change-page-prev {
-    @apply absolute top-0 w-[122px] h-full;
+    // @apply absolute top-0 w-[122px] h-full;
+    @apply absolute top-0 w-[82px] h-full;
   }
   .btn-change-page-prev > div:first-child {
     @apply bg-gradient-prev;
@@ -100,7 +101,8 @@
   }
 
   .btn-change-page-next {
-    @apply absolute top-0 w-[122px] h-full;
+    // @apply absolute top-0 w-[122px] h-full;
+    @apply absolute top-0 w-[82px] h-full;
   }
   .btn-change-page-next > div:first-child {
     @apply bg-gradient-next;

@@ -4,6 +4,7 @@ import { Layout } from "@/shared/components/layouts";
 import initAnimate from "@/shared/hooks/animacion-page-1";
 import { Page1 } from "@/shared/components/pages/page-1";
 import Image from "next/image";
+import Head from "next/head";
 
 const HomePage: NextPage = () => {
   const [image, setImage] = useState<string>("portada-anim-02.webp");
@@ -27,6 +28,13 @@ const HomePage: NextPage = () => {
 
   return (
     <Layout title="Home" className="w-[587px] h-[831px]" nextUrl="/page-2">
+      <Head>
+        <title>Nuevo Toyota AGYA: El auto ideal</title>
+        <meta
+          name="description"
+          content="Descubre el Nuevo Toyota AGYA, todo lo que buscas en tu primer auto. Disfruta de ahorro de combustible, conectividad y seguridad, junto con un amplio interior."
+        />
+      </Head>
       <Page1 className="relative">
         <Image
           src={`/images/01/${image}`}

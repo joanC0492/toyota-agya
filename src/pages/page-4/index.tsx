@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { Layout } from "@/shared/components/layouts";
 import { Page4 } from "@/shared/components/pages/page-4";
 import initAnimate from "@/shared/hooks/animacion-page-4";
+import Head from "next/head";
 
 const SeguridadPage: NextPage = () => {
   useEffect(() => {
@@ -11,6 +12,10 @@ const SeguridadPage: NextPage = () => {
 
   return (
     <Layout title="" nextUrl="/page-5" prevUrl="/page-3">
+      <Head>
+        <title>Toyota AGYA tiene La Seguridad que Buscas para Proteger lo que Amas</title>
+        <meta name="description" content="Encuentra la seguridad que buscas para proteger a quienes amas con nuestro sistema de anclaje ISOFIX, ABS y más tecnologías avanzadas." />
+      </Head>
       <Page4 className="bg-[url('/images/04/seguridad.webp')] | w-[1194px] | h-[834px] | relative">
         <div className="absolute | left-0 | top-0 | text-white">
           <Page4.Title

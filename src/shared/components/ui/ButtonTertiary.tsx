@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 interface IProps {
+  id?: string;
   className?: string;
   dataNombreboton?: string;
   url: string;
@@ -8,12 +9,14 @@ interface IProps {
 }
 export const ButtonTertiary = ({
   url,
+  id = "",
   className = "",
   dataNombreboton = "",
   text = "",
 }: IProps) => {
   return (
     <a
+      id={id}
       href={url}
       target="_blank"
       rel="noopener"

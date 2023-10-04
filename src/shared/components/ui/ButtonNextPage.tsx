@@ -7,12 +7,14 @@ export const ButtonNextPage = ({ url }: IProps) => {
   return (
     <a
       className="z-40 right-0 btn-change-page-next"
+      id={`boton_siguiente_pagina_${url.split("-").pop()}`}
       href={url}
       data-nombreboton={`boton prev ${
         url === "/" ? "page-1" : url.split("/")[1]
       }`}>
       <div className="w-full h-full flex items-center justify-end">
-        <div className="mr-6">
+        {/* <div className="mr-6"> */}
+        <div className="mr-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
