@@ -23,7 +23,7 @@ const Page06: NextPage = () => {
   return (
     <LayoutSecondary>
       <div className={`${css["container-page"]} fade-block`}>
-        <Link
+        <a
           id="boton_regresar_pagina_5"
           className="z-40 left-0 btn-change-page-prev"
           href="/page-5/">
@@ -44,7 +44,7 @@ const Page06: NextPage = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </a>
 
         <div id="page-6" className={css["page-6"]}>
           <div className={css["no-bg"]} />
@@ -328,7 +328,7 @@ const Page06: NextPage = () => {
           </div>
         </div>
 
-        <Link
+        <a
           id="boton_siguiente_pagina_7"
           className="z-40 right-0 btn-change-page-next"
           href="/page-7/">
@@ -349,7 +349,7 @@ const Page06: NextPage = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </a>
       </div>
     </LayoutSecondary>
   );

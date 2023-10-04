@@ -17,7 +17,7 @@ const Page05: NextPage = () => {
   return (
     <LayoutSecondary>
       <div className={`${css["container-page"]} fade-block`}>
-        <Link
+        <a
           id="boton_regresar_pagina_4"
           className="z-40 left-0 btn-change-page-prev"
           href="/page-4/">
@@ -38,7 +38,7 @@ const Page05: NextPage = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </a>
         <div id="page-5" className={css["page-5"]}>
           <div className={css["logo-agya"]}>
             <svg
@@ -228,114 +228,8 @@ const Page05: NextPage = () => {
             </p>
           </div>
         </div>
-        {/* <div className="ty-modal-overlay" /> */}
-        {/* <div id="modal-aventuras" className="ty-modal-two">
-          <div className="ty-modal-box">
-            <div className="ty-modal-contenido">
-              <div className="ty-cerrar-modal">
-                <div className="btn-closed">
-                  <svg
-                    width={14}
-                    height={14}
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13 7H1M7 13V1"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="ty-modal-content">
-                <div className="slider-fade">
-                  <div>
-                    <Image
-                      src={"/images/05/modal/aventura_1.webp"}
-                      width={871}
-                      height={544}
-                      alt="Aventura 1"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src={"/images/05/modal/aventura_2.webp"}
-                      width={871}
-                      height={544}
-                      alt="Aventura 2"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src={"/images/05/modal/aventura_3.webp"}
-                      width={871}
-                      height={544}
-                      alt="Aventura 3"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src={"/images/05/modal/aventura_4.webp"}
-                      width={871}
-                      height={544}
-                      alt="Aventura 4"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src={"/images/05/modal/aventura_5.webp"}
-                      width={871}
-                      height={544}
-                      alt="Aventura 5"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="custom-prev"
-                  data-nombreboton="prev modal ver mas aventuras">
-                  <div className="btn-arrows btn-prev">
-                    <svg
-                      width={14}
-                      height={24}
-                      viewBox="0 0 14 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1.1453 23.22L12.0811 13.0653C12.5072 12.6696 12.5072 11.9953 12.0811 11.5997L1.1453 1.44497"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  className="custom-next"
-                  data-nombreboton="next modal ver mas aventuras">
-                  <div className="btn-arrows btn-next">
-                    <svg
-                      width={14}
-                      height={24}
-                      viewBox="0 0 14 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1.1453 23.22L12.0811 13.0653C12.5072 12.6696 12.5072 11.9953 12.0811 11.5997L1.1453 1.44497"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <Link
+
+        <a
           id="boton_siguiente_pagina_6"
           className="z-40 right-0 btn-change-page-next"
           href="/page-6/">
@@ -356,7 +250,7 @@ const Page05: NextPage = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </a>
       </div>
     </LayoutSecondary>
   );
